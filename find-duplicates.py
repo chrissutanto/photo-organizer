@@ -1,6 +1,5 @@
 import shutil, os
 
-duplicates = open("duplicates.txt", "w")  # file to write duplicates to
 
 
 def sort_dictionary(dictionary):
@@ -8,7 +7,7 @@ def sort_dictionary(dictionary):
     dictionary_lines = dictionary.readlines()
     dictionary_list = []  # list of tuples where first value is hash, second value is filename
     for line in dictionary_lines:
-        filename, colon, hash_value = line.split(' ')
+        filename, hash_value = line.split(' : ')
         hash_value = hash_value[:-1]
         dictionary_list.append((hash_value, filename))
     return sorted(dictionary_list)
@@ -42,5 +41,6 @@ def write_duplicate(item):
 print("enter directory")
 startDir = str(input())
 dictionary = open(startDir + "/dictionary.txt")
+duplicates = open(os.path.join(startDir, "duplicates.txt"), "w")  # file to write duplicates to
 sorted_list = sort_dictionary(dictionary)
 find_duplicates(sorted_list)

@@ -1,8 +1,5 @@
 import os, hashlib
 
-# writes new text file called "dictionary
-dictionary = open("dictionary.txt", "w")
-
 
 def parse_directory(directory):
     """goes through current directory and subdirectories, calling writeToDictionary on all files"""
@@ -25,5 +22,6 @@ def write_to_dictionary(location):
 
 print("enter directory")
 startDir = str(input())
+dictionary = open(os.path.join(startDir, "dictionary.txt"), "w")  # writes new text file called dictionary.txt in provided directory
 parse_directory(startDir)
 print("written to dictionary.txt")
