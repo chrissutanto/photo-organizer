@@ -24,3 +24,4 @@ def writeToDictionary(location):
 
 startDir = 'C:/Users/chris/Documents/Python Projects/Test/testfldr'
 parseDirectory(startDir)
+#
