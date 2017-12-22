@@ -1,4 +1,4 @@
-import shutil, os, hashlib
+import os, hashlib
 
 # writes new text file called "dictionary
 dictionary = open("dictionary.txt", "w")
