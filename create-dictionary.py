@@ -25,6 +25,5 @@ def write_to_dictionary(location):
 
 print("enter directory")
 startDir = str(input())
-#startDir = 'C:/Users/chris/Documents/Python Projects/Test/testfldr'  # placeholder directory
 parse_directory(startDir)
 print("written to dictionary.txt")
