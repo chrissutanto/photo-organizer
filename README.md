@@ -1,1 +1,2 @@
-"# photo-organizer" 
+create-dictionary writes a text file of all files in a directory and that directory's sub-directories.
+find-duplicates writes a text file of all duplicates in a directory that create-dictionary has already been run on.
